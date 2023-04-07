@@ -1,0 +1,341 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>15.0</VCProjectVersion>
+    <ProjectGuid>{aac14208-d17a-4cbb-bffe-7550d51d1ecf}</ProjectGuid>
+    <RootNamespace>FlatFormerEngine</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0.17134.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <OutDir>$(SolutionDir)bin\$(Configuration)-$(Platform)\$(ProjectName)\</OutDir>
+    <IntDir>$(SolutionDir)bin-int\$(Configuration)-$(Platform)\$(ProjectName)\</IntDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <OutDir>$(SolutionDir)bin\$(Configuration)-$(Platform)\$(ProjectName)\</OutDir>
+    <IntDir>$(SolutionDir)bin-int\$(Configuration)-$(Platform)\$(ProjectName)\</IntDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <OutDir>$(SolutionDir)bin\$(Configuration)-$(Platform)\$(ProjectName)\</OutDir>
+    <IntDir>$(SolutionDir)bin-int\$(Configuration)-$(Platform)\$(ProjectName)\</IntDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <OutDir>$(SolutionDir)bin\$(Configuration)-$(Platform)\$(ProjectName)\</OutDir>
+    <IntDir>$(SolutionDir)bin-int\$(Configuration)-$(Platform)\$(ProjectName)\</IntDir>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <SDLCheck>true</SDLCheck>
+      <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>include;$(SolutionDir)Dependencies\TTF\include;$(SolutionDir)Dependencies\zlib\include;$(SolutionDir)Dependencies\spdlog\include;$(SolutionDir)Dependencies\LuaBridge\include;$(SolutionDir)Dependencies\Lua\include;$(SolutionDir)Dependencies\RTTR\include;$(SolutionDir)Dependencies\SDL2\include;$(SolutionDir)Dependencies\SDL2_image\include</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>_CRT_SECURE_NO_WARNINGS;_MBCS;%(PreprocessorDefinitions);</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <AdditionalLibraryDirectories>$(SolutionDir)Dependencies\TTF\lib;$(SolutionDir)Dependencies\zlib\lib;$(SolutionDir)Dependencies\Lua\lib;$(SolutionDir)Dependencies\RTTR\lib;$(SolutionDir)Dependencies\SDL2\lib\x86;$(SolutionDir)Dependencies\SDL2_image\lib\x86</AdditionalLibraryDirectories>
+      <AdditionalDependencies>SDL2_ttf.lib;zlib.lib;lua52.lib;SDL2_image.lib;SDL2.lib;SDL2main.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;odbc32.lib;odbccp32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <SubSystem>Console</SubSystem>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <SDLCheck>true</SDLCheck>
+      <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>include;$(SolutionDir)Dependencies\zlib\include;$(SolutionDir)Dependencies\spdlog\include;$(SolutionDir)Dependencies\LuaBridge\include;$(SolutionDir)Dependencies\Lua\include;$(SolutionDir)Dependencies\RTTR\include;$(SolutionDir)Dependencies\SDL2\include;$(SolutionDir)Dependencies\SDL2_image\include</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <AdditionalLibraryDirectories>$(SolutionDir)Dependencies\zlib\lib;$(SolutionDir)Dependencies\Lua\lib;$(SolutionDir)Dependencies\RTTR\lib;$(SolutionDir)Dependencies\SDL2\lib\x86;$(SolutionDir)Dependencies\SDL2_image\lib\x86</AdditionalLibraryDirectories>
+      <AdditionalDependencies>zlib.lib;lua52.lib;SDL2_image.lib;SDL2.lib;SDL2main.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;odbc32.lib;odbccp32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <SubSystem>Console</SubSystem>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>include;$(SolutionDir)Dependencies\TTF\include;$(SolutionDir)Dependencies\zlib\include;$(SolutionDir)Dependencies\spdlog\include;$(SolutionDir)Dependencies\LuaBridge\include;$(SolutionDir)Dependencies\Lua\include;$(SolutionDir)Dependencies\RTTR\include;$(SolutionDir)Dependencies\SDL2\include;$(SolutionDir)Dependencies\SDL2_image\include</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>_CRT_SECURE_NO_WARNINGS;_MBCS;%(PreprocessorDefinitions);FFE_DISABLE_LOGGING</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalLibraryDirectories>$(SolutionDir)Dependencies\TTF\lib;$(SolutionDir)Dependencies\zlib\lib;$(SolutionDir)Dependencies\Lua\lib;$(SolutionDir)Dependencies\RTTR\lib;$(SolutionDir)Dependencies\SDL2\lib\x86;$(SolutionDir)Dependencies\SDL2_image\lib\x86</AdditionalLibraryDirectories>
+      <AdditionalDependencies>SDL2_ttf.lib;zlib.lib;lua52.lib;SDL2_image.lib;SDL2.lib;SDL2main.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;odbc32.lib;odbccp32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <SubSystem>Console</SubSystem>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>include;$(SolutionDir)Dependencies\zlib\include;$(SolutionDir)Dependencies\spdlog\include;$(SolutionDir)Dependencies\LuaBridge\include;$(SolutionDir)Dependencies\Lua\include;$(SolutionDir)Dependencies\RTTR\include;$(SolutionDir)Dependencies\SDL2\include;$(SolutionDir)Dependencies\SDL2_image\include</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>_MBCS;%(PreprocessorDefinitions);FFE_DISABLE_LOGGING</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalLibraryDirectories>$(SolutionDir)Dependencies\zlib\lib;$(SolutionDir)Dependencies\Lua\lib;$(SolutionDir)Dependencies\RTTR\lib;$(SolutionDir)Dependencies\SDL2\lib\x86;$(SolutionDir)Dependencies\SDL2_image\lib\x86</AdditionalLibraryDirectories>
+      <AdditionalDependencies>zlib.lib;lua52.lib;SDL2_image.lib;SDL2.lib;SDL2main.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;odbc32.lib;odbccp32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <SubSystem>Console</SubSystem>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="src\Asset\Render\JPGAssetLoader.cpp" />
+    <ClCompile Include="src\Asset\Render\PNGAssetLoader.cpp" />
+    <ClCompile Include="src\Asset\Render\TTFAssetLoader.cpp" />
+    <ClCompile Include="src\Collision\BroadPhase.cpp" />
+    <ClCompile Include="src\ECS\Collision\Colliders\CircleCollider.cpp" />
+    <ClCompile Include="src\ECS\Collision\Colliders\PlygonCollider.cpp" />
+    <ClCompile Include="src\ECS\Collision\CollisionSystem.cpp" />
+    <ClCompile Include="src\Collision\QuadTree\QuadTreeNode.cpp" />
+    <ClCompile Include="src\Collision\SeparationGrid.cpp" />
+    <ClCompile Include="src\Application\Application.cpp" />
+    <ClCompile Include="src\Asset\AssetCache.cpp" />
+    <ClCompile Include="src\Asset\AssetHandle.cpp" />
+    <ClCompile Include="src\Asset\ResourceDirectory.cpp" />
+    <ClCompile Include="src\Asset\ResourceZipFile.cpp" />
+    <ClCompile Include="src\Asset\ZipFile.cpp" />
+    <ClCompile Include="src\ECS\ComponentManager.cpp" />
+    <ClCompile Include="src\ECS\EntityManager.cpp" />
+    <ClCompile Include="src\ECS\IComponent.cpp" />
+    <ClCompile Include="src\ECS\ISystem.cpp" />
+    <ClCompile Include="src\ECS\Physics\ForceIntegrationSystem.cpp" />
+    <ClCompile Include="src\ECS\Physics\PhysicsSystem.cpp" />
+    <ClCompile Include="src\ECS\Physics\RigidBody\RigidBodyComponent.cpp" />
+    <ClCompile Include="src\ECS\Render\RenderSystem.cpp" />
+    <ClCompile Include="src\ECS\SystemManager.cpp" />
+    <ClCompile Include="src\Engine\API.cpp" />
+    <ClCompile Include="src\Engine\Engine.cpp" />
+    <ClCompile Include="src\Engine\Service\ServiceStaticDefinition.cpp" />
+    <ClCompile Include="src\Event\EventManager.cpp" />
+    <ClCompile Include="src\Event\IEvent.cpp" />
+    <ClCompile Include="src\Event\IEventListener.cpp" />
+    <ClCompile Include="src\Math\vec2.cpp" />
+    <ClCompile Include="src\Render\SDLContext.cpp" />
+    <ClCompile Include="src\Render\View.cpp" />
+    <ClCompile Include="src\Window\SDLInput.cpp" />
+    <ClCompile Include="src\Window\SDLWindow.cpp" />
+    <ClCompile Include="src\Log\Logger.cpp" />
+    <ClCompile Include="src\Log\LoggerManager.cpp" />
+    <ClCompile Include="src\Math\FFMath.cpp" />
+    <ClCompile Include="src\Collision\QuadTree\QuadTree.cpp" />
+    <ClCompile Include="src\Math\Transform2D.cpp" />
+    <ClCompile Include="src\Memory\Allocator\IAllocator.cpp" />
+    <ClCompile Include="src\Memory\Allocator\LinearAllocator.cpp" />
+    <ClCompile Include="src\Memory\Allocator\PoolAllocator.cpp" />
+    <ClCompile Include="src\Memory\Allocator\QueueAllocator.cpp" />
+    <ClCompile Include="src\Memory\Allocator\StackAllocator.cpp" />
+    <ClCompile Include="src\Memory\MemoryManager.cpp" />
+    <ClCompile Include="src\Scripts\LuaInteractionLayer.cpp" />
+    <ClCompile Include="src\Util\TickCounter.cpp" />
+    <ClCompile Include="src\Util\Timer.cpp" />
+    <ClCompile Include="src\Util\TypeIDCounter.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="include\Asset\Render\FontAssetPayloadData.h" />
+    <ClInclude Include="include\Asset\Render\ImageAssetPayloadData.h" />
+    <ClInclude Include="include\Asset\Render\JPGAssetLoader.h" />
+    <ClInclude Include="include\Asset\Render\PNGAssetLoader.h" />
+    <ClInclude Include="include\Asset\Render\TTFAssetLoader.h" />
+    <ClInclude Include="include\Collision\BroadPhase.h" />
+    <ClInclude Include="include\ECS\Collision\Colliders\CircleCollider.h" />
+    <ClInclude Include="include\ECS\Collision\Colliders\Collider.h" />
+    <ClInclude Include="include\ECS\Collision\Colliders\ColliderComponent.h" />
+    <ClInclude Include="include\ECS\Collision\Colliders\PolygonCollider.h" />
+    <ClInclude Include="include\ECS\Collision\CollisionEventComponent.h" />
+    <ClInclude Include="include\ECS\Collision\CollisionSystem.h" />
+    <ClInclude Include="include\Collision\ContactInfo.h" />
+    <ClInclude Include="include\Collision\FF_AABB.h" />
+    <ClInclude Include="include\Collision\QuadTree\QuadTreeNode.h" />
+    <ClInclude Include="include\Collision\SeparationGrid.h" />
+    <ClInclude Include="include\Application\Application.h" />
+    <ClInclude Include="include\Asset\Asset.h" />
+    <ClInclude Include="include\Asset\AssetCache.h" />
+    <ClInclude Include="include\Asset\AssetHandle.h" />
+    <ClInclude Include="include\Asset\DefaultAssetLoader.h" />
+    <ClInclude Include="include\Asset\IResourceProvider.h" />
+    <ClInclude Include="include\Asset\IAssetLoader.h" />
+    <ClInclude Include="include\Asset\ResourceDirectory.h" />
+    <ClInclude Include="include\Asset\ResourceZipFile.h" />
+    <ClInclude Include="include\Asset\ZipFile.h" />
+    <ClInclude Include="include\ECS\Collision\QuadTreeDebugComponent.h" />
+    <ClInclude Include="include\ECS\Common\TransformComponent.h" />
+    <ClInclude Include="include\ECS\Component.h" />
+    <ClInclude Include="include\ECS\ComponentFilter.h" />
+    <ClInclude Include="include\ECS\ComponentManager.h" />
+    <ClInclude Include="include\ECS\ECS.h" />
+    <ClInclude Include="include\ECS\EntityManager.h" />
+    <ClInclude Include="include\ECS\IComponent.h" />
+    <ClInclude Include="include\ECS\ISystem.h" />
+    <ClInclude Include="include\ECS\Physics\ForceIntegrationSystem.h" />
+    <ClInclude Include="include\ECS\Physics\PhysicsSystem.h" />
+    <ClInclude Include="include\ECS\Physics\RigidBody\RigidBodyComponent.h" />
+    <ClInclude Include="include\ECS\Render\AnimationRenderSystem.h" />
+    <ClInclude Include="include\ECS\Render\AnimatorComponent.h" />
+    <ClInclude Include="include\ECS\Render\BaseRenderSystem.h" />
+    <ClInclude Include="include\ECS\Render\CameraComponent.h" />
+    <ClInclude Include="include\ECS\Render\ColliderRenderSystem.h" />
+    <ClInclude Include="include\ECS\Render\CollisionEventRenderSystem.h" />
+    <ClInclude Include="include\ECS\Render\QuadTreeRenderSystem.h" />
+    <ClInclude Include="include\ECS\Render\RenderBeginSystem.h" />
+    <ClInclude Include="include\ECS\Render\RenderEndSystem.h" />
+    <ClInclude Include="include\ECS\Render\RenderSystem.h" />
+    <ClInclude Include="include\ECS\Render\SpriteComponent.h" />
+    <ClInclude Include="include\ECS\Render\SpriteRenderSystem.h" />
+    <ClInclude Include="include\ECS\Render\TextComponent.h" />
+    <ClInclude Include="include\ECS\Render\TextRenderSystem.h" />
+    <ClInclude Include="include\ECS\System.h" />
+    <ClInclude Include="include\ECS\SystemManager.h" />
+    <ClInclude Include="include\Engine\API.h" />
+    <ClInclude Include="include\Engine\Engine.h" />
+    <ClInclude Include="include\Engine\GameEvents.h" />
+    <ClInclude Include="include\Engine\Platform.h" />
+    <ClInclude Include="include\Engine\QuitManager.h" />
+    <ClInclude Include="include\Engine\Service\AssetCacheUser.h" />
+    <ClInclude Include="include\Engine\Service\ComponentManagerUser.h" />
+    <ClInclude Include="include\Engine\Service\EntityManagerUser.h" />
+    <ClInclude Include="include\Engine\Service\EventManagerUser.h" />
+    <ClInclude Include="include\Engine\Service\IDPoolUser.h" />
+    <ClInclude Include="include\Engine\Service\MemoryManagerUser.h" />
+    <ClInclude Include="include\Engine\Service\SystemManagerUser.h" />
+    <ClInclude Include="include\Engine\Service\TickCounterUser.h" />
+    <ClInclude Include="include\Engine\Service\ViewUser.h" />
+    <ClInclude Include="include\Engine\Service\Wrap\EventManagerUserWrap.h" />
+    <ClInclude Include="include\Event\Event.h" />
+    <ClInclude Include="include\Event\EventDelegate.h" />
+    <ClInclude Include="include\Event\EventDispatcher.h" />
+    <ClInclude Include="include\Event\EventManager.h" />
+    <ClInclude Include="include\Event\IEvent.h" />
+    <ClInclude Include="include\Event\IEventDelegate.h" />
+    <ClInclude Include="include\Event\IEventDispatcher.h" />
+    <ClInclude Include="include\Event\IEventListener.h" />
+    <ClInclude Include="include\Math\vec2.h" />
+    <ClInclude Include="include\Render\Animation.h" />
+    <ClInclude Include="include\Render\BasicColors.h" />
+    <ClInclude Include="include\Render\IGraphicsContext.h" />
+    <ClInclude Include="include\Render\RenderStructs.h" />
+    <ClInclude Include="include\Render\SDLContext.h" />
+    <ClInclude Include="include\Render\Sprite.h" />
+    <ClInclude Include="include\Render\View.h" />
+    <ClInclude Include="include\Window\IInput.h" />
+    <ClInclude Include="include\Window\InputEvents.h" />
+    <ClInclude Include="include\Window\IWindow.h" />
+    <ClInclude Include="include\Log\Logger.h" />
+    <ClInclude Include="include\Log\LoggerMacro.h" />
+    <ClInclude Include="include\Log\LoggerManager.h" />
+    <ClInclude Include="include\Math\FFMath.h" />
+    <ClInclude Include="include\Collision\QuadTree\QuadTree.h" />
+    <ClInclude Include="include\Math\Transform2D.h" />
+    <ClInclude Include="include\Memory\Allocator\IAllocator.h" />
+    <ClInclude Include="include\Memory\Allocator\LinearAllocator.h" />
+    <ClInclude Include="include\Memory\Allocator\PoolAllocator.h" />
+    <ClInclude Include="include\Memory\Allocator\QueueAllocator.h" />
+    <ClInclude Include="include\Memory\Allocator\StackAllocator.h" />
+    <ClInclude Include="include\Memory\IObjectDispatcher.h" />
+    <ClInclude Include="include\Memory\MemoryManager.h" />
+    <ClInclude Include="include\Memory\ObjectDispatcher.h" />
+    <ClInclude Include="include\Window\KeyCodes.h" />
+    <ClInclude Include="include\Window\MouseButtonCodes.h" />
+    <ClInclude Include="include\Window\SDLInput.h" />
+    <ClInclude Include="include\Window\SDLWindow.h" />
+    <ClInclude Include="include\Script\LuaInteractionLayer.h" />
+    <ClInclude Include="include\Script\LuaMetamethods.h" />
+    <ClInclude Include="include\Script\ScriptAsset.h" />
+    <ClInclude Include="include\Script\ScriptComponent.h" />
+    <ClInclude Include="include\Script\ScriptSystem.h" />
+    <ClInclude Include="include\Util\IDPool.h" />
+    <ClInclude Include="include\Util\ID.h" />
+    <ClInclude Include="include\Util\TickCounter.h" />
+    <ClInclude Include="include\Util\Timer.h" />
+    <ClInclude Include="include\Util\TypeIDCounter.h" />
+    <ClInclude Include="include\Window\WindowEvents.h" />
+    <ClInclude Include="src\EntryPoint.h" />
+    <ClInclude Include="src\FlatFormer.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="DLLDependencies\libfreetype-6.dll" />
+    <None Include="DLLDependencies\libjpeg-9.dll" />
+    <None Include="DLLDependencies\libpng16-16.dll" />
+    <None Include="DLLDependencies\SDL2.dll" />
+    <None Include="DLLDependencies\SDL2_image.dll" />
+    <None Include="DLLDependencies\SDL2_ttf.dll" />
+    <None Include="DLLDependencies\zlib1.dll" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

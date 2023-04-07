@@ -1,0 +1,11 @@
+target_link_libraries(MyApp RTTR::Core)         # rttr as dynamic library
+target_link_libraries(MyApp RTTR::Core_STL)     # rttr as dynamic library but with static runtime library
+target_link_libraries(MyApp RTTR::Core_Lib)     # rttr as static library
+target_link_libraries(MyApp RTTR::Core_Lib_STL) # rttr as static library and static runtime library
+
+rttr_core.lib - требует dll
+...
+
+
+ВАЖНО!
+librttr_core_s_d.lib - статическая библиотека (рабочая)

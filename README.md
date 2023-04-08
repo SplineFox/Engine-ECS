@@ -1,4 +1,5 @@
 # Engine-ECS
+<img src="https://github.com/SplineFox/Engine-ECS/blob/main/ReadmeMedia/FlatFormerEngine%20-%20Banner.png">
 
 ## Обзор
 FlatFormer - это игровой движок, построенный по архитектуре ECS. Имеет базовые составляющие для создания простых 2D проектов. Целью его разработки было углубление знаний в области основных концепций построения игровых движков.
